@@ -431,4 +431,5 @@ if __name__ == '__main__':
         print(f"경고: 기준 데이터 디렉토리 없음 → {LANDMARKS_DIR}")
     else:
         print(f"📁 기준 데이터 디렉토리 확인됨: {LANDMARKS_DIR}")
-    app.run(host='0.0.0.0', port=8000, debug=False)
+    port = int(os.environ.get("PORT", 5000))  # Render가 PORT 환경변수를 제공
+    app.run(host="0.0.0.0", port=port)

@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: todak-backend
+    env: docker
+    plan: free
+    branch: main
+    repo: https://github.com/jjuliaahn11/todak.git
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    region: oregon
